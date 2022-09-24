@@ -7,6 +7,7 @@ class Node{
         int data;
         Node *next;
     public:
+        Node();
         Node(int value, Node *next);
         int getValue();
         void setValue(int);

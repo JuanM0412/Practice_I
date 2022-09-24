@@ -8,14 +8,18 @@ Node::Node(int value, Node *_next = nullptr){
     this->next = _next;
 }
 
-int Node::getValue(){
-    return this->data;    
-}
-
 void Node::setValue(int value){
     data = value;
 }
 
+int Node::getValue(){
+    return data;    
+}
+
 void Node::setNext(Node *_next){
     next = _next;
+}
+
+Node *Node::getNext(){
+    return next;    
 }

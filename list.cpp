@@ -29,3 +29,13 @@ int LinkedList::pop(){
 
     return value;
 }
+
+void LinkedList::showElement(LinkedList *l){
+    Node *act;
+    act = l->head;
+
+    while(act != nullptr){
+        cout << act->getValue() << endl;
+        act = act->getNext();
+    }
+}
