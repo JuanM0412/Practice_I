@@ -39,3 +39,20 @@ void LinkedList::showElement(LinkedList *l){
         act = act->getNext();
     }
 }
+
+void LinkedList::searchElement(LinkedList *l, int n){
+    Node *aux1 = l->head;
+    Node *aux2 = aux1->getNext();
+    int i = 1;
+    while(aux2 != nullptr && aux1->getValue() != n){
+        aux1 = aux2;
+        aux2 = aux1->getNext();
+        i++;
+    }
+    if(aux1->getValue() == n){
+        cout << "La posición del elemento en memoria es: " << aux1 << endl;
+        cout << "La posición del elemento en la lista es: " << i << endl;
+    } else {
+        cout << "El elemento no está en la lista." << endl;
+    }
+}

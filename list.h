@@ -12,4 +12,5 @@ class LinkedList{
         void push(int);
         int pop(); //Eliminar elemento
         void showElement(LinkedList *l);
+        void searchElement(LinkedList *l, int n);
 };
