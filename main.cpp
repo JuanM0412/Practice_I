@@ -19,11 +19,21 @@ int main(){
     cout << "Inserté el 5" << endl;
     list.push(5);
 
+    cout << "Lista antes de eliminar elementos: " << endl;
     list.showElement(&list);
 
-    cout << "Ingresa el número que quieres buscar: " << endl;
+    cout << "Ingresa el número que quiere buscar: " << endl;
     cin >> n;
     list.searchElement(&list, n);
+
+    cout << "Ingrese el número que quiere eliminar: " << endl;
+    cin >> n;
+    list.deleteElement(&list, n);
+
+    cout << "Lista después de eliminar elementos: " << endl;
+    list.showElement(&list);
+
+    cout << "Fin del programa" << endl;
 
     return 0;
 }

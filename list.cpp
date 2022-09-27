@@ -8,26 +8,29 @@ LinkedList::LinkedList(){
 }
 
 LinkedList::~LinkedList(){
-    while (this->head != nullptr) pop();
+    while (this->head != nullptr);
 }
 
 void LinkedList::push(int value){
     this->head = new Node(value, this->head);
 }
 
-int LinkedList::pop(){
-    int value;
-
-    if(this->head != nullptr){
-        value = this->head->getValue();
-        Node *temp = this->head;
-        this->head = this->head;
-        delete temp;
-    } else{
-        throw range_error("Lista vacía.");
+void LinkedList::deleteElement(LinkedList *l, int n){
+    Node *aux1 = l->head;
+    Node *aux2 = aux1->getNext();
+    int i = 1;
+    while(aux2 != nullptr && aux2->getValue() != n){
+        aux1 = aux2;
+        aux2 = aux1->getNext();
+        i++;
     }
-
-    return value;
+    if(aux2->getValue() == n){
+        aux1->setNext(aux2->getNext());
+        cout << "El elemento " << n << " fue eliminado correctamente" << endl;
+        free(aux2);
+    } else {
+        cout << "El elemento no pudo ser eliminado porque no existe dentro de la lista." << endl;
+    }
 }
 
 void LinkedList::showElement(LinkedList *l){
