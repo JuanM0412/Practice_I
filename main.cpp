@@ -26,7 +26,7 @@ int main(){
     cin >> n;
     list.searchElement(&list, n);
 
-    cout << "Ingrese el número que quiere eliminar: " << endl;
+    cout << "Ingrese la posición que tiene el elemento que quiere eliminar en la lista: " << endl;
     cin >> n;
     list.deleteElement(&list, n);
 

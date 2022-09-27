@@ -16,20 +16,24 @@ void LinkedList::push(int value){
 }
 
 void LinkedList::deleteElement(LinkedList *l, int n){
-    Node *aux1 = l->head;
-    Node *aux2 = aux1->getNext();
+    Node *current = l->head;
+    Node *previous = nullptr;
     int i = 1;
-    while(aux2 != nullptr && aux2->getValue() != n){
-        aux1 = aux2;
-        aux2 = aux1->getNext();
+    while((current != nullptr) && (i < n)){
+        previous = current;
+        current = current->getNext();
         i++;
     }
-    if(aux2->getValue() == n){
-        aux1->setNext(aux2->getNext());
-        cout << "El elemento " << n << " fue eliminado correctamente" << endl;
-        free(aux2);
-    } else {
+    if(current == nullptr){
         cout << "El elemento no pudo ser eliminado porque no existe dentro de la lista." << endl;
+    } 
+    else if(previous == nullptr){
+        head = current->getNext();
+        delete current;
+    }
+    else {
+        previous -> setNext(current->getNext());
+        delete current;
     }
 }
 
