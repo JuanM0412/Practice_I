@@ -14,4 +14,5 @@ class LinkedList{
         void showElement(LinkedList *l);
         void searchElement(LinkedList *l, int);
         int sumPromedioPares(LinkedList *l);
+        int sumPromedioImpares(LinkedList *l);
 };

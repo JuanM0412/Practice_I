@@ -84,3 +84,24 @@ int LinkedList::sumPromedioPares(LinkedList *l){
         return 0;
     }
 }
+
+int LinkedList::sumPromedioImpares(LinkedList *l){
+    int i = 0;
+    int sum = 0;
+    Node *aux1 = l->head;
+    Node *aux2 = nullptr;
+    while(aux1 != nullptr){
+        if(aux1->getValue()%2 == 1){
+            sum += aux1->getValue();
+            i++;
+        }
+        aux2 = aux1;
+        aux1 = aux2->getNext();
+    }
+    if(i != 0){
+        return sum/i;
+    }
+    else{
+        return 0;
+    }
+}
