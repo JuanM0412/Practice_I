@@ -4,20 +4,21 @@
 using namespace std;
 
 int main(){
-
     int n;
     LinkedList list;
 
     cout << "Inserté el 1" << endl;
-    list.push(1);
+    list.push(10);
     cout << "Inserté el 2" << endl;
-    list.push(2);
+    list.push(10);
     cout << "Inserté el 3" << endl;
-    list.push(3);
+    list.push(30);
     cout << "Inserté el 4" << endl;
-    list.push(4);
+    list.push(10);
     cout << "Inserté el 5" << endl;
-    list.push(5);
+    list.push(50);
+
+    cout << "Suma promedio de los números pares de la lista: " << list.sumPromedioPares(&list) << endl;
 
     cout << "Lista antes de eliminar elementos: " << endl;
     list.showElement(&list);
@@ -36,4 +37,6 @@ int main(){
     cout << "Fin del programa" << endl;
 
     return 0;
+
+    cout << "Fin del programa" << endl;
 }

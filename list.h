@@ -13,4 +13,5 @@ class LinkedList{
         void deleteElement(LinkedList *l, int); //Eliminar elemento
         void showElement(LinkedList *l);
         void searchElement(LinkedList *l, int);
+        int sumPromedioPares(LinkedList *l);
 };

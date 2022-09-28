@@ -1,4 +1,7 @@
 Fecha: 
+Semestre: 2022-II
+Materia: Lenguajes de programacion
+Universidad EAFIT
 
 Juan Manuel Gomez Piedrahita
 
@@ -8,17 +11,17 @@ Objetivo: llevar a la practica l implementacion de listas enlazadas y POO en la 
 
 Instrucciones:
 Construya un programa con listas enlazadas con las siguientes funcionalidades:
-1.Insertar elementos a la lista.
-2.Mostrar elementos de la lista.
-3.Buscar elementos en la lista.
-4.Eliminar elementosde la lista.
-5.Calcular suma promedio números pare.
-6.Calcular suma promedio números impare.
-7.Calcular numero menor de la lista.
-8.Calcular número mayor de la list.
-9.Mostrar elementos repetidos de la lista.
-10.Eliminar elementos duplicados de la lista.
-11.Salir.
+1. Insertar elementos a la lista.
+2. Mostrar elementos de la lista.
+3. Buscar elementos en la lista.
+4. Eliminar elementosde la lista.
+5. Calcular suma promedio números parse.
+6. Calcular suma promedio números impars.
+7. Calcular numero menor de la lista.
+8. Calcular número mayor de la lista.
+9. Mostrar elementos repetidos de la lista.
+10. Eliminar elementos duplicados de la lista.
+11. Salir.
 
 URL del video sustentacion: 
 
