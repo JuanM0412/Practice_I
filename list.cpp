@@ -133,3 +133,20 @@ int LinkedList::numeroMayor(LinkedList *l){
     }
     return mayor;
 }
+
+void LinkedList::elementosRepetidos(LinkedList *l){
+    Node *aux1 = l->head;
+    Node *aux2 = nullptr;
+    int value;
+    while(aux1 != nullptr){
+        aux2 = aux1->getNext();
+        value = aux1->getValue();
+        while(aux2 != nullptr){
+            if(aux1->getValue() == aux2->getValue()){
+                cout << "El elemento " << aux2->getValue() << " se repite." << endl;
+            }
+            aux2 = aux2->getNext();
+        }
+        aux1 = aux1->getNext();
+    }
+}

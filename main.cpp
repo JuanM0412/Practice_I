@@ -9,19 +9,21 @@ int main(){
     LinkedList list;
 
     cout << "Inserté el dato 1" << endl;
-    list.push(101);
+    list.push(1);
     cout << "Inserté el dato 2" << endl;
-    list.push(101);
+    list.push(1);
     cout << "Inserté el dato 3" << endl;
-    list.push(301);
+    list.push(1);
     cout << "Inserté el dato 4" << endl;
-    list.push(101);
+    list.push(1);
     cout << "Inserté el dato 5" << endl;
-    list.push(50);
+    list.push(1);
 
     cout << "Suma promedio de los números pares de la lista: " << list.sumPromedioPares(&list) << endl;
 
     cout << "Suma promedio de los números impares de la lista: " << list.sumPromedioImpares(&list) << endl;
+
+    list.elementosRepetidos(&list);
 
     cout << "Lista antes de eliminar elementos: " << endl;
     list.showElement(&list);

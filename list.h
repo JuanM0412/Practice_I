@@ -17,4 +17,5 @@ class LinkedList{
         int sumPromedioImpares(LinkedList *l);
         int numeroMenor(LinkedList *l);
         int numeroMayor(LinkedList *l);
+        void elementosRepetidos(LinkedList *l);
 };
