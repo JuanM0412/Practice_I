@@ -15,4 +15,6 @@ class LinkedList{
         void searchElement(LinkedList *l, int);
         int sumPromedioPares(LinkedList *l);
         int sumPromedioImpares(LinkedList *l);
+        int numeroMenor(LinkedList *l);
+        int numeroMayor(LinkedList *l);
 };

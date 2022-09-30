@@ -105,3 +105,31 @@ int LinkedList::sumPromedioImpares(LinkedList *l){
         return 0;
     }
 }
+
+int LinkedList::numeroMenor(LinkedList *l){
+    Node *aux1 = l->head;
+    Node *aux2 = nullptr;
+    int menor = 1000000;
+    while(aux1 != nullptr){
+        if(aux1->getValue() < menor){
+            menor = aux1->getValue();
+        }
+        aux2 = aux1;
+        aux1 = aux2->getNext();
+    }
+    return menor;
+}
+
+int LinkedList::numeroMayor(LinkedList *l){
+    Node *aux1 = l->head;
+    Node *aux2 = nullptr;
+    int mayor = -1000000;
+    while(aux1 != nullptr){
+        if(aux1->getValue() > mayor){
+            mayor = aux1->getValue();
+        }
+        aux2 = aux1;
+        aux1 = aux2->getNext();
+    }
+    return mayor;
+}

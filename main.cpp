@@ -1,5 +1,5 @@
 #include <iostream>
-//#include <stdlib.h>
+#include <stdlib.h>
 #include "list.cpp"
 
 using namespace std;
@@ -26,6 +26,10 @@ int main(){
     cout << "Lista antes de eliminar elementos: " << endl;
     list.showElement(&list);
 
+    cout << "El número más pequeño dentro de la lista es: " << list.numeroMenor(&list) << endl;
+
+    cout << "El número más grande dentro de la lista es: " << list.numeroMayor(&list) << endl;
+
     cout << "Ingresa el número que quiere buscar: " << endl;
     cin >> n;
     list.searchElement(&list, n);
@@ -37,6 +41,10 @@ int main(){
     cout << "Lista después de eliminar elementos: " << endl;
     list.showElement(&list);
 
+    cout << "El número más pequeño dentro de la lista es: " << list.numeroMenor(&list) << endl;
+
+    cout << "El número más grande dentro de la lista es: " << list.numeroMayor(&list) << endl;
+
     cout << "Suma promedio de los números pares de la lista: " << list.sumPromedioPares(&list) << endl;
 
     cout << "Suma promedio de los números impares de la lista: " << list.sumPromedioImpares(&list) << endl;
@@ -44,6 +52,6 @@ int main(){
     cout << "Fin del programa" << endl;
 
     return 0;
-    //exit(0);
-    //abort;
+    exit(0);
+    abort;
 }
