@@ -13,10 +13,11 @@ class LinkedList{
         void deleteElement(LinkedList *l, int); //Eliminar elemento
         void showElement(LinkedList *l);
         void searchElement(LinkedList *l, int);
-        int sumPromedioPares(LinkedList *l);
-        int sumPromedioImpares(LinkedList *l);
-        int numeroMenor(LinkedList *l);
-        int numeroMayor(LinkedList *l);
-        void elementosRepetidos(LinkedList *l);
-        void eliminarRepetidos(LinkedList *l);
+        int averagePairs(LinkedList *l);
+        int averageOdd(LinkedList *l);
+        int lowestNum(LinkedList *l);
+        int biggestNum(LinkedList *l);
+        void showRepeats(LinkedList *l);
+        void deleteRepeats(LinkedList *l);
+        void bubbleSort(LinkedList *l);
 };

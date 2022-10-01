@@ -64,7 +64,7 @@ void LinkedList::searchElement(LinkedList *l, int n){
     }
 }
 
-int LinkedList::sumPromedioPares(LinkedList *l){
+int LinkedList::averagePairs(LinkedList *l){
     int i = 0;
     int sum = 0;
     Node *aux1 = l->head;
@@ -85,7 +85,7 @@ int LinkedList::sumPromedioPares(LinkedList *l){
     }
 }
 
-int LinkedList::sumPromedioImpares(LinkedList *l){
+int LinkedList::averageOdd(LinkedList *l){
     int i = 0;
     int sum = 0;
     Node *aux1 = l->head;
@@ -106,7 +106,7 @@ int LinkedList::sumPromedioImpares(LinkedList *l){
     }
 }
 
-int LinkedList::numeroMenor(LinkedList *l){
+int LinkedList::lowestNum(LinkedList *l){
     Node *aux1 = l->head;
     Node *aux2 = nullptr;
     int menor = 1000000;
@@ -120,7 +120,7 @@ int LinkedList::numeroMenor(LinkedList *l){
     return menor;
 }
 
-int LinkedList::numeroMayor(LinkedList *l){
+int LinkedList::biggestNum(LinkedList *l){
     Node *aux1 = l->head;
     Node *aux2 = nullptr;
     int mayor = -1000000;
@@ -134,7 +134,7 @@ int LinkedList::numeroMayor(LinkedList *l){
     return mayor;
 }
 
-void LinkedList::elementosRepetidos(LinkedList *l){
+void LinkedList::showRepeats(LinkedList *l){
     Node *aux1 = l->head;
     Node *aux2 = nullptr;
     while(aux1 != nullptr){
@@ -149,22 +149,45 @@ void LinkedList::elementosRepetidos(LinkedList *l){
     }
 }
 
-void LinkedList::eliminarRepetidos(LinkedList *l){
+void LinkedList::deleteRepeats(LinkedList *l){
     Node *aux1 = l->head;
     Node *aux2 = nullptr;
-    int i = 1;
-    int j;
+    Node *aux3 = nullptr;
     while(aux1 != nullptr){
+        aux3 = aux1;
         aux2 = aux1->getNext();
-        j = i;
         while(aux2 != nullptr){
             if(aux1->getValue() == aux2->getValue()){
-                deleteElement(l, j);
+                aux3->setNext(aux2->getNext());
+                delete aux2;
             }
-            aux2 = aux2->getNext();
-            j++;
+            aux3 = aux3->getNext();
+            if(aux3 != nullptr){
+                aux2 = aux3->getNext();
+            } else {
+                break;
+            }
         }
         aux1 = aux1->getNext();
-        i++;
     }
+}
+
+void LinkedList::bubbleSort(LinkedList *l){
+    Node *aux1 = l->head;
+    Node *aux2 = nullptr;
+    int temp;
+    while(aux1->getNext() != nullptr){
+        aux2 = aux1->getNext();
+        while(aux2 != nullptr){
+            if(aux1->getValue() < aux2->getValue()){
+                temp = aux2->getValue();
+                aux2->setValue(aux1->getValue());
+                aux1->setValue(temp);
+            }
+            aux2 = aux2->getNext();
+        }
+        aux1 = aux1->getNext();
+        aux2 = aux1->getNext();
+    }
+    cout << "Lista ordenada exitosamente." << endl;
 }
