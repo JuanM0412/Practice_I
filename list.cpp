@@ -137,10 +137,8 @@ int LinkedList::numeroMayor(LinkedList *l){
 void LinkedList::elementosRepetidos(LinkedList *l){
     Node *aux1 = l->head;
     Node *aux2 = nullptr;
-    int value;
     while(aux1 != nullptr){
         aux2 = aux1->getNext();
-        value = aux1->getValue();
         while(aux2 != nullptr){
             if(aux1->getValue() == aux2->getValue()){
                 cout << "El elemento " << aux2->getValue() << " se repite." << endl;
@@ -148,5 +146,25 @@ void LinkedList::elementosRepetidos(LinkedList *l){
             aux2 = aux2->getNext();
         }
         aux1 = aux1->getNext();
+    }
+}
+
+void LinkedList::eliminarRepetidos(LinkedList *l){
+    Node *aux1 = l->head;
+    Node *aux2 = nullptr;
+    int i = 1;
+    int j;
+    while(aux1 != nullptr){
+        aux2 = aux1->getNext();
+        j = i;
+        while(aux2 != nullptr){
+            if(aux1->getValue() == aux2->getValue()){
+                deleteElement(l, j);
+            }
+            aux2 = aux2->getNext();
+            j++;
+        }
+        aux1 = aux1->getNext();
+        i++;
     }
 }

@@ -18,4 +18,5 @@ class LinkedList{
         int numeroMenor(LinkedList *l);
         int numeroMayor(LinkedList *l);
         void elementosRepetidos(LinkedList *l);
+        void eliminarRepetidos(LinkedList *l);
 };

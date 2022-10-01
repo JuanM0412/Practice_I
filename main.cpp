@@ -11,13 +11,13 @@ int main(){
     cout << "Inserté el dato 1" << endl;
     list.push(1);
     cout << "Inserté el dato 2" << endl;
-    list.push(1);
+    list.push(2);
     cout << "Inserté el dato 3" << endl;
     list.push(1);
     cout << "Inserté el dato 4" << endl;
-    list.push(1);
+    list.push(4);
     cout << "Inserté el dato 5" << endl;
-    list.push(1);
+    list.push(5);
 
     cout << "Suma promedio de los números pares de la lista: " << list.sumPromedioPares(&list) << endl;
 
@@ -26,6 +26,10 @@ int main(){
     list.elementosRepetidos(&list);
 
     cout << "Lista antes de eliminar elementos: " << endl;
+    list.showElement(&list);
+
+    cout << "Lista sin elementos repetidos: " << endl;
+    list.eliminarRepetidos(&list);
     list.showElement(&list);
 
     cout << "El número más pequeño dentro de la lista es: " << list.numeroMenor(&list) << endl;
