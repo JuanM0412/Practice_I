@@ -33,6 +33,8 @@ Opcional:
 13. Invertir los elementos de la lista enlazada.
 
 URL del video sustentacion: 
+https://youtu.be/jk5F2IK-bvo
+https://youtu.be/hdzjTzzheH8
 
 Sistema operativo usado: archlinux.
 
