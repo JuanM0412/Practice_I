@@ -56,11 +56,9 @@ void LinkedList::searchElement(LinkedList *l, int n){
         i++;
     }
     if(aux1->getValue() == n){
-        cout << "La posición del elemento en memoria es: " << aux1 << endl;
         cout << "La posición del elemento en la lista es: " << i << endl;
-    } else {
-        cout << "El elemento no está en la lista." << endl;
     }
+    cout << "El elemento no está en la lista." << endl;
 }
 
 int LinkedList::averagePairs(LinkedList *l){
@@ -136,11 +134,17 @@ int LinkedList::biggestNum(LinkedList *l){
 void LinkedList::showRepeats(LinkedList *l){
     Node *aux1 = l->head;
     Node *aux2 = nullptr;
+    int n;
     while(aux1 != nullptr){
         aux2 = aux1->getNext();
+        if(aux1->getValue() == n){
+            aux1 = aux1->getNext();
+            continue;
+        }
         while(aux2 != nullptr){
             if(aux1->getValue() == aux2->getValue()){
                 cout << aux2->getValue() << endl;
+                n = aux2 ->getValue();
             }
             aux2 = aux2->getNext();
         }
