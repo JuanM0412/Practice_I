@@ -7,67 +7,90 @@ using namespace std;
 void menu();
 
 int main(){
-    int n;
+
+    int n, option;
+    char confirm = 's', yes = 's';
+    bool loop = true;
     LinkedList list;
 
-    cout << "Inserté el dato 1" << endl;
-    list.push(5);
-    cout << "Inserté el dato 2" << endl;
-    list.push(5);
-    cout << "Inserté el dato 3" << endl;
-    list.push(4);
-    cout << "Inserté el dato 4" << endl;
-    list.push(3);
-    cout << "Inserté el dato 5" << endl;
-    list.push(2);
-    cout << "Inserté el dato 6" << endl;
-    list.push(1);
+    while(loop){
 
-    cout << "Suma promedio de los números pares de la lista: " << list.averagePairs(&list) << endl;
+        menu();
+        cin >> option;
 
-    cout << "Suma promedio de los números impares de la lista: " << list.averageOdd(&list) << endl;
-
-    cout << "Lista antes de ordenar los elementos: " << endl;
-    list.showElement(&list);
-
-    list.bubbleSort(&list);
-    cout << "Lista ordenada: " << endl;
-    list.showElement(&list);
-
-    list.showRepeats(&list);
-
-    cout << "Lista sin elementos repetidos: " << endl;
-    list.deleteRepeats(&list);
-    list.showElement(&list);
-
-    cout << "El número más pequeño dentro de la lista es: " << list.lowestNum(&list) << endl;
-
-    cout << "El número más grande dentro de la lista es: " << list.biggestNum(&list) << endl;
-
-    cout << "Ingresa el número que quiere buscar: " << endl;
-    cin >> n;
-    list.searchElement(&list, n);
-
-    cout << "Ingrese la posición que tiene el elemento que quiere eliminar en la lista: " << endl;
-    cin >> n;
-    list.deleteElement(&list, n);
-
-    cout << "Lista después de eliminar elementos: " << endl;
-    list.showElement(&list);
-
-    cout << "El número más pequeño dentro de la lista es: " << list.lowestNum(&list) << endl;
-
-    cout << "El número más grande dentro de la lista es: " << list.biggestNum(&list) << endl;
-
-    cout << "Suma promedio de los números pares de la lista: " << list.averagePairs(&list) << endl;
-
-    cout << "Suma promedio de los números impares de la lista: " << list.averageOdd(&list) << endl;
-
-    menu();
+        switch (option){
+            case 1:
+                while(yes == confirm){
+                    cout << "Ingrese el número que quiere insertar en la lista: " << endl;
+                    cin >> n;
+                    list.push(n);
+                    cout << "¿Desea seguir insertando elementos a la lista? ('s' para sí, 'n' para no): " << endl;
+                    cin >> confirm;
+                }
+                cout << "\n\n\n";
+                break;
+            case 2:
+                cout << "Los elementos que hay dentro de la lista son los siguientes: " << endl;
+                list.showElement(&list);
+                cout << "\n\n\n";
+                break;
+            case 3:
+                cout << "Ingrese el elemento que quiere buscar dentro de la lista: " << endl;
+                cin >> n;
+                list.searchElement(&list, n);
+                cout << "\n\n\n";
+                break;
+            case 4:
+                cout << "Ingrese la posición del elemento que desea eliminar: " << endl;
+                cin >> n;
+                list.deleteElement(&list, n);
+                cout << "\n\n\n";
+                break;
+            case 5:
+                cout << "La suma promedio de los números pares que hay dentro de la lista es: " << list.averagePairs(&list) << endl;
+                cout << "\n\n\n";
+                break;
+            case 6:
+                cout << "La suma promedio de los números impares que hay dentro de la lista es: " << list.averageOdd(&list) << endl;
+                cout << "\n\n\n";
+                break;
+            case 7:
+                cout << "El número menor presente en la lista es: " << list.lowestNum(&list) << endl;
+                cout << "\n\n\n";
+                break;
+            case 8:
+                cout << "El número mayor presente en la lista es: " << list.biggestNum(&list) << endl;
+                cout << "\n\n\n";
+                break;
+            case 9:
+                cout << "Los números repetidos dentro de la lista son: " << endl;
+                list.showRepeats(&list);
+                cout << "\n\n\n";
+                break;
+            case 10:
+                cout << "Esta es la lista sin los elementos repetidos: " << endl;
+                list.deleteRepeats(&list);
+                list.showElement(&list);
+                cout << "\n\n\n";
+                break;
+            case 11:
+                cout << "Lista ordenada de manera decreciente: " << endl;
+                list.bubbleSort(&list);
+                cout << "\n\n\n";
+                break;
+            case 12:
+                cout << "Lista invertida: " << endl;
+                list.reverse(&list);
+                cout << "\n\n\n";
+                break;
+            default:
+                loop = false;
+                break;
+        }
+    }
 
     return 0;
-    exit(0);
-    abort;
+    system("PAUSE");
 }
 
 void menu(){

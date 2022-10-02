@@ -20,4 +20,5 @@ class LinkedList{
         void showRepeats(LinkedList *l);
         void deleteRepeats(LinkedList *l);
         void bubbleSort(LinkedList *l);
+        void reverse(LinkedList *l);
 };

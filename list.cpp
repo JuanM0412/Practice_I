@@ -189,5 +189,19 @@ void LinkedList::bubbleSort(LinkedList *l){
         aux1 = aux1->getNext();
         aux2 = aux1->getNext();
     }
-    cout << "Lista ordenada exitosamente." << endl;
+    showElement(l);
+}
+
+void LinkedList::reverse(LinkedList *l){
+    Node *aux1 = l->head;
+    Node *aux2 = nullptr;
+    Node *aux3 = nullptr;
+    while (aux1 != nullptr){
+        aux2 = aux1->getNext();
+        aux1->setNext(aux3);
+        aux3 = aux1;
+        aux1 = aux2;
+    }
+    head = aux3;
+    showElement(l);
 }
