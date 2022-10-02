@@ -8,10 +8,11 @@ class LinkedList{
         Node *head;
     public:
         LinkedList();
-        ~LinkedList();
+        Node *getHead();
         void push(int);
         void deleteElement(LinkedList *l, int); //Eliminar elemento
         void showElement(LinkedList *l);
+        void showElements(LinkedList *l);
         void searchElement(LinkedList *l, int);
         int averagePairs(LinkedList *l);
         int averageOdd(LinkedList *l);

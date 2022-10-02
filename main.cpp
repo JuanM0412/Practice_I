@@ -14,6 +14,8 @@ int main(){
     bool loop = true;
     LinkedList list;
 
+    list.getHead();
+
     while(loop){
         menu();
         cout << "Seleccione una de las opciones mostradas anteriormente: ";
@@ -32,12 +34,12 @@ int main(){
                     cout << "¿Desea seguir insertando elementos a la lista? ('s' para sí, 'n' para no): " << endl;
                     cin >> confirm;
                 }
+                cout << list.getHead();
                 break;
             case 2:
                 cout << "-----------------------------" << endl;
                 cout << "Mostrar elementos de la lista" << endl;
                 cout << "-----------------------------" << endl;
-                cout << "Los elementos que hay dentro de la lista son los siguientes: " << endl;
                 list.showElement(&list);
                 break;
             case 3:
@@ -84,7 +86,6 @@ int main(){
                 cout << "-------------------------------" << endl;
                 cout << "Elementos repetidos en la lista" << endl;
                 cout << "-------------------------------" << endl;
-                cout << "Los números repetidos dentro de la lista son: " << endl;
                 list.showRepeats(&list);
                 break;
             case 10:
@@ -93,28 +94,22 @@ int main(){
                 cout << "----------------------------------------" << endl;
                 cout << "Esta es la lista sin los elementos repetidos: " << endl;
                 list.deleteRepeats(&list);
-                list.showElement(&list);
-                cout << "¿Su lista sigue teniendo elementos repetidos? ('s' para sí, 'n' para no): " << endl;
-                cin >> confirm;
                 while(yes == confirm){
-                    list.deleteRepeats(&list);
-                    list.showElement(&list);
                     cout << "¿Su lista sigue teniendo elementos repetidos? ('s' para sí, 'n' para no): " << endl;
                     cin >> confirm;
+                    list.deleteRepeats(&list);
                 }
                 break;
             case 11:
                 cout << "-------------------------------------" << endl;
                 cout << "Ordenar la lista en forma decreciente" << endl;
                 cout << "-------------------------------------" << endl;
-                cout << "Lista ordenada de manera decreciente: " << endl;
                 list.bubbleSort(&list);
                 break;
             case 12:
                 cout << "-----------------" << endl;
                 cout << "Invertir la lista" << endl;
                 cout << "-----------------" << endl;
-                cout << "Lista invertida: " << endl;
                 list.reverse(&list);
                 break;
             case 13:

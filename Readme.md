@@ -1,4 +1,4 @@
-Fecha: 
+Fecha: 2 de octubre de 2022
 
 Semestre: 2022-II
 
@@ -19,13 +19,18 @@ Construya un programa con listas enlazadas con las siguientes funcionalidades:
 2. Mostrar elementos de la lista.
 3. Buscar elementos en la lista.
 4. Eliminar elementos de la lista.
-5. Calcular suma promedio números paes.
-6. Calcular suma promedio números impaes.
+5. Calcular suma promedio número pares.
+6. Calcular suma promedio número impares.
 7. Calcular numero menor de la lista.
 8. Calcular número mayor de la lista.
 9. Mostrar elementos repetidos de la lista.
 10. Eliminar elementos duplicados de la lista.
 11. Salir.
+
+Opcional:
+
+12. Ordenar la lista enlazada de forma decreciente.
+13. Invertir los elementos de la lista enlazada.
 
 URL del video sustentacion: 
 
