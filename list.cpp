@@ -40,7 +40,6 @@ void LinkedList::deleteElement(LinkedList *l, int n){
 void LinkedList::showElement(LinkedList *l){
     Node *act;
     act = l->head;
-
     while(act != nullptr){
         cout << act->getValue() << endl;
         act = act->getNext();
@@ -141,7 +140,7 @@ void LinkedList::showRepeats(LinkedList *l){
         aux2 = aux1->getNext();
         while(aux2 != nullptr){
             if(aux1->getValue() == aux2->getValue()){
-                cout << "El elemento " << aux2->getValue() << " se repite." << endl;
+                cout << aux2->getValue() << endl;
             }
             aux2 = aux2->getNext();
         }
@@ -155,7 +154,7 @@ void LinkedList::deleteRepeats(LinkedList *l){
     Node *aux3 = nullptr;
     while(aux1 != nullptr){
         aux3 = aux1;
-        aux2 = aux1->getNext();
+        aux2 = aux3->getNext();
         while(aux2 != nullptr){
             if(aux1->getValue() == aux2->getValue()){
                 aux3->setNext(aux2->getNext());
