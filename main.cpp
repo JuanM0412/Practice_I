@@ -14,8 +14,6 @@ int main(){
     bool loop = true;
     LinkedList list;
 
-    list.getHead();
-
     while(loop){
         menu();
         cout << "Seleccione una de las opciones mostradas anteriormente: ";
@@ -34,7 +32,6 @@ int main(){
                     cout << "¿Desea seguir insertando elementos a la lista? ('s' para sí, 'n' para no): " << endl;
                     cin >> confirm;
                 }
-                cout << list.getHead();
                 break;
             case 2:
                 cout << "-----------------------------" << endl;

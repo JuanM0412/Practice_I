@@ -8,7 +8,6 @@ class LinkedList{
         Node *head;
     public:
         LinkedList();
-        Node *getHead();
         void push(int);
         void deleteElement(LinkedList *l, int); //Eliminar elemento
         void showElement(LinkedList *l);

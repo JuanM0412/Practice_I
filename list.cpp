@@ -7,10 +7,6 @@ LinkedList::LinkedList(){
     this->head = nullptr;
 }
 
-Node* LinkedList::getHead(){
-    return this->head;
-}
-
 void LinkedList::push(int value){
     this->head = new Node(value, this->head);
 }
